@@ -42,11 +42,17 @@ public class TaskUnique {
         this.name = name;
         this.deadline = deadline;
     }
+    
+    @Override
+    public String toString() {
+        return "Duplicate [id=" + id + ", name=" + name + ", deadline=" + deadline + "]";
+    }
 
     public static void main(String[] args) {
         ArrayList<TaskUnique> tasks = new ArrayList<>();
 
         TaskUnique t1 = new TaskUnique(1, "wakeupearly", LocalDate.of(2023, 7, 16));
+        tasks.add(t1);
         tasks.add(t1);
         tasks.add(new TaskUnique(2, "Walking", LocalDate.of(2023, 7, 17)));
         tasks.add(new TaskUnique(3, "Office", LocalDate.of(2023, 7, 15)));
