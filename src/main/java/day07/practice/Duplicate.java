@@ -13,6 +13,7 @@ public static void main(String[] args) {
 	
 //	Create a  ArrayList integer
 	ArrayList<Integer> numbers = new ArrayList<Integer>();
+	
 //	Add the List of the numbers with duplication
 	numbers.add(1);
 	numbers.add(3);
