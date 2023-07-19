@@ -51,10 +51,9 @@ class User {
 }
 class UserValidator {
 	static ArrayList<User> arr = new ArrayList<User>();
-	public static String register(User user) throws UserAlreadyExistsException {
-		if (arr.size() == 0) {
-			arr.add(user);
-			return "User added";
+	public static boolean register(User user) throws UserAlreadyExistsException {
+		if(user == null) {
+			throw new UserAlreadyExistsException("Email cannot null");
 		}
 		
 		for(User element:arr) {
@@ -64,15 +63,17 @@ class UserValidator {
 			
 		}
 		arr.add(user);
-		return "User added";
+		System.out.println("User added");
+		return true;
+		
 	}
 }
 public class UserInvalidEmailException {
 public static void main(String[] args) {
 	User use1=new User(1, "yogi", "yogi@gmail.com");
 	User use2=new User(1, "yogi", "yogibot@gmail.com");
-String data1=UserValidator.register(use1);
-String data2=UserValidator.register(use2);
+boolean data1=UserValidator.register(use1);
+boolean data2=UserValidator.register(use2);
 System.out.println(data1);
 System.out.println(data2);
 }

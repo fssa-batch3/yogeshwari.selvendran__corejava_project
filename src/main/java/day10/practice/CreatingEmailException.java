@@ -2,6 +2,8 @@ package day10.practice;
 
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
+import java.util.*;
+
 
 class InvalidEmailException extends Exception {
 	/**
@@ -44,8 +46,11 @@ class EmailValidator {
 
 public class CreatingEmailException {
 public static void main(String[] args) {
+	Scanner s = new Scanner(System.in);
+	System.out.println("Enter your emailId");
+	String email = s.nextLine();
 	try {
-		EmailValidator.isValidEmail("yogi");
+		EmailValidator.isValidEmail(email);
 	} catch (InvalidEmailException e) {
 		e.printStackTrace();
 	}
