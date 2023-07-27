@@ -18,6 +18,7 @@ public class HashMapDemo {
 
 			Integer count = deptMap.get(deptName);
 			System.out.println("Department Name:" + deptName + " and Employee Count :" + count);
+			
 
 		}
 

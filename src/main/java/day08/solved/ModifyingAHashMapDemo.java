@@ -20,6 +20,7 @@ public class ModifyingAHashMapDemo {
 
 			Integer count = deptMap.get(deptName);
 			System.out.println("Department Name:" + deptName + " and Employee Count :" + count);
+			
 
 		}
 	}
